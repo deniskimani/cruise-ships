@@ -1,0 +1,25 @@
+{
+  "name": "cruise-ships",
+  "version": "1.0.0",
+  "description": "A js cruise-ship",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deniskimani/cruise-ships.git"
+  },
+  "keywords": [
+    "cruise-ship"
+  ],
+  "author": "Denis Kimani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deniskimani/cruise-ships/issues"
+  },
+  "homepage": "https://github.com/deniskimani/cruise-ships#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
