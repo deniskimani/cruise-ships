@@ -1,4 +1,3 @@
-const { isTypedArray } = require("../src/Port")
 const Port = require("../src/Port.js")
 
 describe("Port", () => {
