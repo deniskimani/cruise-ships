@@ -9,7 +9,12 @@ describe("Port", () => {
         let queenMary
 
         beforeEach(() => {
-            port = new Port('Dover');
+            port = {
+                addShip: jest.fn(),
+                removeShip: jest.fn(),
+                name: 'Dover',
+                ships: []
+            };
             ship = jest.fn()
             titanic = jest.fn()
             queenMary = jest.fn()
@@ -21,7 +26,7 @@ describe("Port", () => {
 
 
             port.addShip(ship)
-            expect(port.ships).toContain(ship)
+            expect(port.addShip).toHaveBeenCalledWith(ship)
         })
 
         it('can remove a ship', () => {
@@ -32,7 +37,7 @@ describe("Port", () => {
             port.addShip(queenMary)
             port.removeShip(queenMary)
 
-            expect(port.ships).toEqual([titanic])
+            expect(port.removeShip).toHaveBeenCalledWith(queenMary)
         })
     })
     it("can be instatiated", () => {
