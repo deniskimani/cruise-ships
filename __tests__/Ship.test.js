@@ -21,7 +21,7 @@ describe("Ship", () => {
         expect(ship.currentPort).toBe(port)
     })
 
-    it("can set sail", () => {
+    it('can set sail', () => {
         const dover = new Port('Dover');
         const calais = new Port('Calais');
         const itinerary = new Itinerary([dover, calais]);
@@ -29,7 +29,8 @@ describe("Ship", () => {
 
         ship.setSail();
 
-        expect(ship.currentPort).toBeFalsy()
+        expect(ship.currentPort).toBeFalsy();
+        expect(dover.ships).not.toContain(ship);
     })
 
     it("can dock at a different port", () => {
